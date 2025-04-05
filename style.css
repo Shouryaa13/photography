@@ -1,0 +1,1600 @@
+@font-face {
+    font-family: manuka;
+    src: url(./manuka-regular.ttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: manuka;
+    font-weight: 700;
+    src: url(./manuka-bold.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: manuka;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#nav {
+    width: 100%;
+    position: fixed;
+    z-index: 9;
+    padding: 1vw 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#music-bar {
+    height: 50px;
+    width: 60px;
+    overflow: hidden;
+}
+
+#nav-part2 img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    scale: 2.5;
+}
+
+#nav svg {
+    fill: #fff;
+    height: 40px;
+}
+
+#nav .logo {
+    fill: #fff;
+    width: 10vw;
+}
+
+#nav .country {
+    width: 1.3vw;
+    fill: #fff;
+}
+
+#nav-part2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+}
+
+#nav-part2 h4 {
+    font-size: 1.3vw;
+    font-family: montserrat;
+    color: #fff;
+}
+
+#page1 {
+    height: 100vh;
+    width: 100%;
+    scale: 0.8;
+    background-color: #241f11;
+    border-radius: 5px;
+    position: relative;
+}
+
+#content button {
+    padding: 1.5vw 3.5vw;
+    color: #fff;
+    border: 2px solid #fff;
+    background-color: transparent;
+    font-size: 2.5vw;
+    position: absolute;
+    bottom: 5%;
+    right: 3%;
+    font-family: manuka;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+#texture {
+    height: 100%;
+    width: 100%;
+    background-image: url(./bg-texture.jpg);
+    opacity: 0.5;
+    position: absolute;
+}
+
+#timer {
+    height: 8vw;
+    width: 18vw;
+    overflow: hidden;
+    position: absolute;
+    bottom: 4%;
+    right: 2%;
+    color: #fff;
+    text-align: right;
+    z-index: 99;
+}
+
+#timer h1 {
+    font-size: 7vw;
+    font-weight: 800;
+    font-family: manuka;
+    transition: all ease 0.8s;
+    transition-delay: 1s;
+}
+
+#page1 button {
+    padding: 1.45vw 4.2vw;
+    font-size: 2.6vw;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    transition: all ease 0.8s;
+    transition-delay: 1s;
+    font-weight: 900;
+    opacity: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+button::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    transition: all ease 0.4s;
+}
+
+button:hover::after {
+    bottom: 0;
+}
+
+button span {
+    position: relative;
+    z-index: 9;
+    transition: all ease 0.4s;
+}
+
+button:hover span {
+    color: #000;
+}
+
+#content {
+    position: relative;
+    z-index: 9;
+    color: #fff;
+    padding: 10vw 4vw 4vw;
+}
+
+#content h1 {
+    font-family: manuka;
+    font-weight: 100;
+    text-transform: uppercase;
+    font-size: 20vw;
+    line-height: 18vw;
+}
+
+#content h1 span {
+    font-weight: 900;
+}
+
+#content #patti {
+    height: 40vw;
+    position: absolute;
+    top: 9%;
+    left: 15%;
+    z-index: 8;
+}
+
+#content #log {
+    height: 28vw;
+    position: absolute;
+    top: 7%;
+    left: 51%;
+    rotate: 3deg;
+    z-index: 7;
+    opacity: 0;
+}
+
+#main #video-container {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    padding: 1vw 5vw;
+}
+
+#video-container video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#page2 {
+    height: 100vh;
+    width: 500vw;
+    position: relative;
+    display: flex;
+}
+
+#page2-part1 {
+    height: 100%;
+    width: 100vw;
+    padding: 10vw 5vw 5vw;
+}
+
+#page2-part1 h1 {
+    font-family: manuka;
+    font-size: 4.8vw;
+    color: #ddd;
+}
+
+#page2-part1 h1 span {
+    font-family: manuka;
+}
+
+#page3 {
+    height: 100vh;
+    width: 100%;
+    background-color: #111;
+    color: #6f6f2d;
+    padding: 5vw;
+}
+
+.elemm {
+    height: 25vh;
+    border-top: 2px solid #fff;
+    opacity: 0.5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 30%;
+    width: 70%;
+}
+
+.elemm h1 {
+    font-family: manuka;
+    font-size: 5vw;
+}
+
+.elemm p {
+    width: 40%;
+    opacity: 0;
+    font-family: gilroy;
+}
+
+.elemm:nth-last-child(1) {
+    border-bottom: 2px solid #fff;
+}
+
+#page3 img {
+    position: absolute;
+}
+
+.page4 {
+    min-height: 100vh;
+    width: 100%;
+    z-index: 9;
+    position: relative;
+    padding: 170px 100px;
+    background-color: black;
+}
+
+.jig {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.jig img {
+    position: absolute;
+    opacity: 0;
+    transition: all ease-out 0.5s;
+    transform: translateY(10%) rotate(2deg);
+}
+
+.jig img:nth-child(1) {
+    left: 2%;
+}
+
+.jig img:nth-child(3) {
+    right: 5%;
+}
+
+.text-div {
+    height: 16vh;
+    position: relative;
+    z-index: 9;
+    overflow: hidden;
+}
+
+.jig h1 {
+    font-size: 5vw;
+    font-weight: 600;
+    transition: all ease-out 0.5s;
+}
+
+.jig:hover h1 {
+    transform: translateY(-100%);
+    color: #EDBFFF;
+}
+
+.jig:hover img {
+    opacity: 1;
+    transform: translateY(0%) rotate(0deg);
+}
+
+@font-face {
+    font-family: america;
+    src: url(./GT-America-Compressed-Bold.woff2);
+}
+
+@font-face {
+    font-family: america-b;
+    src: url(./GT-America-Compressed-Black-Trial.woff2);
+}
+
+@font-face {
+    font-family: Gilroy;
+    src: url(./Gilroy-Medium.woff2);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Gilroy;
+    src: url(./Gilroy-Semibold.woff2);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: Gilroy;
+    src: url(./Gilroy-bold.woff2);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(./Montserrat-Bold.woff2);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(./Montserrat-Bold.woff2);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(./Montserrat-Medium.woff2);
+    font-weight: 500;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: gilroy;
+}
+
+*::selection {
+    color: #fff;
+    background-color: #111;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#main {
+    background-color: #fff;
+}
+
+#nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    position: fixed;
+    z-index: 99;
+    color: #c45508;
+}
+
+#nav h3 {
+    font-family: america;
+    text-transform: uppercase;
+    color: inherit;
+    font-size: 28px;
+    width: 20%;
+    text-align: center;
+}
+
+#nav i {
+    display: none;
+}
+
+#nav h3:nth-child(1) {
+    text-align: left;
+}
+
+#nav h3:nth-child(2) {
+    text-align: left;
+}
+
+#nav h3:nth-child(3) {
+    text-align: right;
+}
+
+#nav h3:nth-child(4) {
+    text-align: right;
+}
+
+#full-scr {
+    display: none;
+}
+
+#paage1 {
+    display: none;
+}
+
+svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.4);
+    z-index: 99;
+    fill: #c45508;
+}
+
+path {
+    fill: inherit;
+}
+
+#paage1 h1 {
+    font-size: 14vw;
+    text-align: center;
+    width: 100%;
+    padding: 0 10px;
+    position: absolute;
+    bottom: -5%;
+    color: #c45508;
+    text-transform: uppercase;
+    font-family: america-b;
+    font-weight: 900;
+}
+
+#paage1 h1 span {
+    font-family: america-b;
+}
+
+#paage2 h1 span {
+    font-family: america-b;
+}
+
+#paage1 h1::before {
+    content: "bownds ranches. est. 1885";
+    position: absolute;
+    font-size: 1.1vw;
+    font-family: gilroy;
+    font-weight: 500;
+    left: 2.7vw;
+}
+
+#paage1 h1::after {
+    content: "marketing and selling texas ranches";
+    position: absolute;
+    font-size: 1vw;
+    font-family: montserrat;
+    font-weight: 500;
+    right: 2.7vw;
+}
+
+#overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+#scroll {
+    background-image: url(https://bowndsranches.com/textures/buttonDarkBg.svg);
+    padding: 8px 20px;
+    font-family: america;
+    word-spacing: 5px;
+    color: #fff;
+    position: absolute;
+    text-transform: uppercase;
+    scale: 0;
+    transition: all ease-out 0.3s;
+}
+
+#paage2 {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    background-position: 60% 0%;
+    background-color: #fff;
+}
+
+#paage2 h1 {
+    font-size: 13vw;
+    line-height: 9.7vw;
+    word-spacing: -16px;
+    letter-spacing: -4px;
+    text-align: center;
+    overflow: hidden;
+    padding: 100px;
+    color: #111;
+    position: relative;
+    background-color: #fff;
+    background-image: url(https://cdn.sanity.io/images/sjvffa0f/production/217c65c6aa3412acac7b3d2fa8adc9020e487780-2724x1936.jpg/map.jpg?rect=1,0,2723,1936&w=1024&h=728&auto=format);
+    background-position: 0% 1200%;
+    background-repeat: no-repeat;
+    font-family: america-b;
+}
+
+#paage2 h1::before {
+    content: "THE REPRESENTATION YOU DESERVE";
+    position: absolute;
+    bottom: 10%;
+    font-size: 1.1vw;
+    width: 13%;
+    text-align: left;
+    line-height: 1.3vw;
+    font-family: gilroy;
+    word-spacing: 0;
+    letter-spacing: 0;
+    font-weight: 500;
+}
+
+#paage2 h1::after {
+    content: "ONE OF AMERICA'S BEST BROKERAGES";
+    position: absolute;
+    bottom: 10%;
+    font-size: 1.1vw;
+    width: 13%;
+    right: 10%;
+    text-align: right;
+    line-height: 1.3vw;
+    font-family: gilroy;
+    word-spacing: 0;
+    letter-spacing: 0;
+    font-weight: 500;
+}
+
+#paage2 img {
+    height: 800px;
+    position: relative;
+    left: 28vw;
+    rotate: 5deg;
+}
+
+#paage2 h2 {
+    font-size: 13vw;
+    line-height: 9.7vw;
+    word-spacing: -16px;
+    letter-spacing: -4px;
+    text-align: center;
+    padding: 100px;
+    color: #111;
+    position: relative;
+    font-family: america-b;
+}
+
+#paage2 h2::after {
+    content: "THIRD GENERATION FAMILY-OWNED RANCH BROKERAGE";
+    font-size: 1.2vw;
+    line-height: 1.3vw;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    word-spacing: 0;
+    letter-spacing: 0;
+    font-family: gilroy;
+    font-weight: 600;
+    transform: translate(-50%, 0);
+}
+
+#paage3 {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-color: #111;
+    padding: 100px 120px;
+}
+
+#paage3 h1 {
+    color: #fff;
+    font-size: 9vw;
+    letter-spacing: -5px;
+    word-spacing: 0;
+    line-height: 8vw;
+    font-family: america;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#paage3 h2 {
+    color: #fff;
+    font-size: 7.5vw;
+    letter-spacing: -5px;
+    word-spacing: 5px;
+    font-weight: 100;
+    font-family: america;
+    text-align: center;
+    -webkit-text-stroke: 3px #111;
+    text-transform: uppercase;
+}
+
+#paage3 p {
+    color: #fff;
+    font-size: 1vw;
+    width: 50%;
+    font-weight: 600;
+    font-family: gilroy;
+    text-align: center;
+    margin: 2vw auto 0;
+    text-transform: uppercase;
+}
+
+#paage3 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    object-position: top;
+}
+
+#img-div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 150px;
+    width: 150px;
+    background-image: url(data:image/png;base64,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);
+    background-position: top;
+    background-size: cover;
+    transition: all linear 0.2s;
+}
+
+#img-div h5 {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    padding: 10px;
+    z-index: 99;
+    background-color: #fff;
+}
+
+#page4 {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #262222;
+    padding: 100px 0;
+}
+
+#page4>button {
+    background-image: url(https://bowndsranches.com/textures/buttonBg.svg);
+    padding: 10px 20px;
+    position: absolute;
+    border: none;
+    font-family: america;
+    text-transform: uppercase;
+    font-size: 17px;
+    z-index: 99;
+}
+
+#page4>img {
+    height: 300px;
+    position: absolute;
+    width: 250px;
+    z-index: 9;
+}
+
+.elem {
+    border-top: 1px solid #ffffffc1;
+    position: relative;
+    cursor: default;
+    margin-top: -20px;
+}
+
+.elem:nth-last-child(1) {
+    border-bottom: 1px solid #ffffffc1;
+}
+
+.elem h1 {
+    font-size: 150px;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    transition: opacity ease 0.1s;
+    opacity: 0.3;
+    font-family: america-b;
+}
+
+.elem h2 {
+    font-size: 150px;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    transition: opacity ease 0.1s;
+}
+
+#moving-text {
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: absolute;
+    top: 0;
+    transition: opacity ease 0.1s;
+    opacity: 0;
+    z-index: 10;
+}
+
+#moving-text h2 {
+    display: inline-block;
+    margin-left: -4px;
+    animation: move-txt 4s linear infinite;
+    position: relative;
+    padding-right: 70px;
+    font-family: america-b;
+}
+
+#moving-text h2 img {
+    rotate: 45deg;
+    height: 30px;
+    right: 3%;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.elem:hover #moving-text {
+    opacity: 1;
+}
+
+.elem:hover h1 {
+    opacity: 0;
+}
+
+@keyframes move-txt {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+#page5 {
+    min-height: 100vh;
+    width: 100%;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    background-color: #111;
+    position: relative;
+    justify-content: center;
+}
+
+#page5-div1 {
+    height: 400px;
+    width: 600px;
+    position: absolute;
+    background-size: cover;
+    rotate: 5deg;
+    background-position: center;
+    background-image: url(https://cdn.sanity.io/images/sjvffa0f/production/336838d48da46ea806426b4185e7f8a87262a6a5-1521x974.png/image.png?rect=1,0,1520,974&bg=F2F1EC&w=1024&h=656&auto=format);
+}
+
+#page5-div2 {
+    z-index: 99;
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    width: 600px;
+    rotate: -4deg;
+    position: absolute;
+    background-image: url(https://cdn.sanity.io/images/sjvffa0f/production/ac5d899c94acdca5124d1fcfb738940892e29544-1520x973.png/image.png?rect=0,1,1520,972&bg=F2F1EC&w=1024&h=655&auto=format);
+}
+
+#page6 {
+    min-height: 200vh;
+    width: 100%;
+    padding: 2px;
+    position: relative;
+}
+
+#page6 img {
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+#page6-text {
+    position: relative;
+    z-index: 99;
+    padding: 5px 20px;
+}
+
+#page6-text h1 {
+    font-size: 7.5vw;
+    line-height: 7vw;
+    color: #fff;
+    font-family: america;
+}
+
+#text-right {
+    position: absolute;
+    top: 150%;
+    right: 10%;
+    width: 20%;
+}
+
+#text-right p {
+    color: #fff;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+#page6-text button {
+    padding: 12px 30px;
+    font-size: 15px;
+    margin-top: 30px;
+    font-family: america;
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    transition: all ease 0.2s;
+}
+
+#page6-text button:hover {
+    color: #111;
+}
+
+#page6-text button::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    left: 0;
+    top: 100%;
+    transition: all ease 0.2s;
+    z-index: -1;
+}
+
+#page6-text button:hover::after {
+    top: 0;
+}
+
+#text-center {
+    position: absolute;
+    top: 350%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+    width: 60%;
+}
+
+#page6-text h2 {
+    font-size: 4vw;
+    line-height: 3.5vw;
+    text-align: center;
+    font-family: america;
+    color: #fff;
+}
+
+#page7 {
+    height: 100vh;
+    width: 100%;
+    background-color: #111;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 100px 80px 100px 10px;
+}
+
+#page7 h1 {
+    font-size: 11vw;
+    color: #faf6ef;
+    text-transform: uppercase;
+    font-family: america;
+}
+
+#page7-part2 {
+    color: #faf6ef;
+    padding-top: 40px;
+}
+
+@media (max-width: 600px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    #main {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    #nav {
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px;
+        position: fixed;
+        z-index: 99;
+        color: #c45508;
+    }
+
+    #nav h3 {
+        display: none;
+        font-family: america;
+        text-transform: uppercase;
+        color: inherit;
+        font-size: 28px;
+        width: 20%;
+    }
+
+    #nav i {
+        display: block;
+        font-size: 25px;
+        font-weight: 900;
+    }
+
+    #full-scr {
+        height: 100vh;
+        width: 100%;
+        background-color: #faf6ef;
+        position: fixed;
+        z-index: 999;
+        padding: 130px 18px 18px;
+        top: -100vh;
+        transition: all cubic-bezier(0, 0.93, 0.91, 0.98) 0.7s;
+        display: block;
+    }
+
+    #full-scr i {
+        position: absolute;
+        top: 3%;
+        left: 5%;
+        font-size: 34px;
+        font-weight: 800;
+    }
+
+    #lol h1 {
+        font-size: 72px;
+        font-family: america;
+        line-height: 70px;
+        text-transform: uppercase;
+    }
+
+    #lol2 {
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 1px solid #b7b7b7;
+    }
+
+    #lol2 h2 {
+        font-size: 20px;
+        font-family: america;
+        font-weight: 100;
+        text-transform: uppercase;
+        -webkit-text-stroke: 0.4px #faf6ef;
+        letter-spacing: -1px;
+        margin-bottom: 13px;
+    }
+
+    #lol2 h3 {
+        font-size: 20px;
+        font-family: america;
+        font-weight: 100;
+        text-transform: uppercase;
+        margin-top: -3px;
+        -webkit-text-stroke: 0.6px #faf6ef;
+        letter-spacing: -1px;
+    }
+
+    #lol3 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 40px;
+    }
+
+    #lol3 h4 {
+        font-size: 20px;
+        font-family: america;
+        font-weight: 100;
+        text-transform: uppercase;
+        margin-top: -3px;
+    }
+
+    #paage1 {
+        height: 80vh;
+        position: relative;
+        width: 100vw;
+        background-size: cover;
+        background-position: 40% 30%;
+        overflow: hidden;
+        background-color: #fff;
+    }
+
+    svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1.3);
+        z-index: 99;
+        fill: #c45508;
+    }
+
+    #full-scr svg {
+        position: absolute;
+        top: 6%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.75);
+        z-index: 99;
+        fill: #101010;
+    }
+
+    #paage1 h1 {
+        font-size: 26vw;
+        text-align: center;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        line-height: 21vw;
+        color: #c45508;
+        text-transform: uppercase;
+        font-family: america-b;
+        font-weight: 900;
+    }
+
+    #paage1 h1::before {
+        content: "bownds ranches. est. 1885";
+        position: absolute;
+        font-size: 3.2vw;
+        width: 35%;
+        top: -25%;
+        font-family: gilroy;
+        line-height: 3.2vw;
+        text-align: left;
+        font-weight: 500;
+        left: 6.7vw;
+    }
+
+    #paage1 h1::after {
+        content: "marketing and selling texas ranches";
+        position: absolute;
+        font-size: 3.2vw;
+        width: 45%;
+        top: -25%;
+        font-family: gilroy;
+        line-height: 3.2vw;
+        text-align: right;
+        font-weight: 500;
+        right: 6.7vw;
+    }
+
+    #overlay {
+        display: none;
+    }
+
+    #scroll {
+        display: none;
+    }
+
+    #paage2 {
+        min-height: 100vh;
+        width: 100%;
+        position: relative;
+        background-position: 60% 0;
+        background-color: #fff;
+        padding: 40px 0;
+    }
+
+    #paage2 h1 {
+        font-size: 19vw;
+        line-height: 16vw;
+        word-spacing: -2px;
+        letter-spacing: -1px;
+        text-align: center;
+        overflow: hidden;
+        padding: 0;
+        color: #111;
+        position: relative;
+        background-color: #fff;
+        background-image: url(https://cdn.sanity.io/images/sjvffa0f/production/217c65c6aa3412acac7b3d2fa8adc9020e487780-2724x1936.jpg/map.jpg?rect=1,0,2723,1936&w=1024&h=728&auto=format);
+        background-position: 0% 1200%;
+        background-repeat: no-repeat;
+        font-family: america-b;
+    }
+
+    #paage2 h1::before {
+        content: "THE REPRESENTATION YOU DESERVE";
+        position: absolute;
+        bottom: 0%;
+        font-size: 3vw;
+        width: 25%;
+        text-align: left;
+        left: 5%;
+        line-height: 3.3vw;
+        font-family: gilroy;
+        word-spacing: 0px;
+        letter-spacing: 0px;
+        font-weight: 500;
+
+    }
+
+    #paage2 h1::after {
+        content: "ONE OF AMERICA’S BEST BROKERAGES";
+        position: absolute;
+        bottom: 0%;
+        font-size: 3vw;
+        width: 25%;
+        right: 5%;
+        text-align: right;
+        line-height: 3vw;
+        font-family: gilroy;
+        word-spacing: 0px;
+        letter-spacing: 0px;
+        font-weight: 500;
+
+    }
+
+    #paage2 img {
+        height: 300px;
+        position: relative;
+        left: 20%;
+
+        rotate: 5deg;
+        margin-top: 10px;
+    }
+
+    #paage2 h2 {
+        font-size: 18vw;
+        line-height: 15vw;
+        word-spacing: -2px;
+        letter-spacing: -1px;
+        text-align: center;
+        padding: 10px 10px;
+        color: #111;
+        position: relative;
+        top: -1vw;
+        font-family: america-b;
+    }
+
+    #paage2 h2::after {
+        content: "THIRD GENERATION FAMILY-OWNED RANCH BROKERAGE";
+        font-size: 3.2vw;
+        line-height: 3.3vw;
+        position: absolute;
+        bottom: -5%;
+        left: 50%;
+        width: 80%;
+        word-spacing: 0px;
+        letter-spacing: 0px;
+        font-family: gilroy;
+        font-weight: 600;
+        -webkit-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+        transform: translate(-50%, 0);
+    }
+
+    #paage3 {
+        height: 100vh;
+        width: 100%;
+        position: relative;
+        background-color: #111;
+        padding: 30px 18px;
+    }
+
+    #paage3 h1 {
+        color: #fff;
+        font-size: 12.5vw;
+        letter-spacing: -1px;
+        word-spacing: 0px;
+        line-height: 11vw;
+
+        font-family: america;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    #paage3 h1::before {
+        content: "“";
+    }
+
+    #paage3 h1::after {
+        content: "”";
+    }
+
+    #paage3 h2 {
+        color: #fff;
+        font-size: 12vw;
+        letter-spacing: -2px;
+        word-spacing: 5px;
+        font-weight: 100;
+        margin-left: auto;
+        margin-right: auto;
+        width: 60%;
+        margin-top: 8px;
+        line-height: 10vw;
+        font-family: america;
+        text-align: center;
+        -webkit-text-stroke: 2px #111;
+        text-transform: uppercase;
+    }
+
+    #page3 p {
+        color: #fff;
+        font-size: 2.8vw;
+        width: 82%;
+        font-weight: 600;
+        font-family: gilroy;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 5vw;
+        margin-top: 5vw;
+        text-transform: uppercase;
+
+    }
+
+
+
+    #img-div {
+        position: absolute;
+        top: 74%;
+        /* display: none; */
+        left: 50%;
+        transform: translate(-50%, 0);
+        height: 120px;
+        width: 120px;
+        background-image: url(https://cdn.sanity.io/images/sjvffa0f/production/9b2b1e20d57cf6988eb3192c1a261b8475d701d4-8192x5464.jpg/JRP_BR_01_1165-Edit.jpg?rect=1038,632,3956,4832&bg=F2F1EC&fp-x=0.3681506849315068&fp-y=0.5578489448352462&w=640&h=815&fit=crop&crop=focalpoint&auto=format);
+        background-position: top;
+        background-size: cover;
+        -webkit-transition: all linear 0.2s;
+        -o-transition: all linear 0.2s;
+        transition: all linear 0.2s;
+    }
+
+    #img-div h5 {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        padding: 5px 10px;
+        font-size: 10px;
+        text-transform: uppercase;
+        z-index: 99;
+        background-color: #fff;
+    }
+
+    #page4 {
+        min-height: 100vh;
+        width: 100%;
+        background-color: #111;
+        padding: 100px 0;
+    }
+
+    #page4>button {
+        background-image: url(https://bowndsranches.com/textures/buttonBg.svg);
+        padding: 10px 20px;
+        position: absolute;
+        border: none;
+        font-family: america;
+        text-transform: uppercase;
+        font-size: 17px;
+        z-index: 99;
+        display: none;
+
+    }
+
+    #page4>img {
+        height: 300px;
+        position: absolute;
+        width: 250px;
+        display: none;
+        z-index: 9;
+
+    }
+
+
+    .elem {
+        border-top: 1px solid #ffffffc1;
+        position: relative;
+        cursor: default;
+        margin-top: -4px;
+        padding: 10px 0;
+    }
+
+    .elem:nth-last-child(1) {
+        border-bottom: 1px solid #ffffffc1;
+    }
+
+    .elem::-webkit-scrollbar {
+        display: none;
+    }
+
+    .elem h1 {
+        font-size: 14vw;
+        color: #fff;
+        text-transform: uppercase;
+        text-align: center;
+        -webkit-transition: opacity ease 0.1s;
+        -o-transition: opacity ease 0.1s;
+        transition: opacity ease 0.1s;
+        opacity: 0;
+        font-family: america-b;
+        /* display: none; */
+
+
+    }
+
+    .elem h2 {
+        font-size: 18vw;
+        color: #fff;
+        text-transform: uppercase;
+        text-align: center;
+        -webkit-transition: opacity ease 0.1s;
+        -o-transition: opacity ease 0.1s;
+        transition: opacity ease 0.1s;
+
+    }
+
+    #moving-text {
+        /* background-color: #111; */
+        white-space: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        position: absolute;
+        top: 0;
+        transition: opacity ease 0.1s;
+        opacity: 1;
+        z-index: 10;
+    }
+
+    #moving-text::-webkit-scrollbar {
+        display: none;
+    }
+
+    #moving-text h2 {
+        display: inline-block;
+        /* background-color: green; */
+        margin-left: -4px;
+        -webkit-animation-name: move-txt;
+        animation-name: move-txt;
+        -webkit-animation-duration: 4s;
+        animation-duration: 4s;
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+        -webkit-animation-timing-function: linear;
+        animation-timing-function: linear;
+        position: relative;
+        padding-right: 70px;
+        /* background-color: red; */
+        font-family: america-b;
+
+    }
+
+    #moving-text h2 img {
+        rotate: 45deg;
+        height: 30px;
+        right: 10%;
+        position: absolute;
+        top: 40%;
+        -webkit-transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+
+        transform: translate(0, -50%);
+
+    }
+
+    .elem:hover #moving-text {
+        opacity: 1;
+    }
+
+    .elem:hover h1 {
+        opacity: 0;
+    }
+
+    @-webkit-keyframes move-txt {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(calc(-100% - 10px));
+        }
+    }
+
+    @keyframes move-txt {
+        0% {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+        }
+
+        100% {
+            -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+        }
+    }
+
+
+    #page5 {
+        min-height: 70vh;
+        width: 100%;
+        padding: 2px;
+        display: flex;
+        align-items: center;
+        background-color: #111;
+        position: relative;
+        justify-content: center;
+    }
+
+    #page5-div1 {
+        height: 180px;
+        width: 280px;
+        position: absolute;
+        background-size: cover;
+        rotate: 0deg;
+        top: 5%;
+        right: 7%;
+        background-position: center;
+        background-image: url(https://cdn.sanity.io/images/sjvffa0f/production/336838d48da46ea806426b4185e7f8a87262a6a5-1521x974.png/image.png?rect=1,0,1520,974&bg=F2F1EC&w=1024&h=656&auto=format);
+    }
+
+    #page5-div2 {
+        z-index: 99;
+        background-size: cover;
+        background-position: center;
+        height: 180px;
+        width: 280px;
+        rotate: 0deg;
+        top: 48%;
+        left: 7%;
+        position: absolute;
+        background-image: url(https://cdn.sanity.io/images/sjvffa0f/production/ac5d899c94acdca5124d1fcfb738940892e29544-1520x973.png/image.png?rect=0,1,1520,972&bg=F2F1EC&w=1024&h=655&auto=format);
+    }
+
+    #page6 {
+        min-height: 200vh;
+        width: 100%;
+        padding: 0px;
+        position: relative;
+    }
+
+    #page6 img {
+        width: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+        height: 100%;
+        object-position: center;
+        position: absolute;
+    }
+
+    #page6-text {
+        position: relative;
+        z-index: 99;
+        padding: 26px 20px;
+    }
+
+    #page6-text h1 {
+        font-size: 15vw;
+        line-height: 13vw;
+        color: #fff;
+        font-family: america;
+    }
+
+    #text-right {
+        position: absolute;
+        top: 100%;
+        left: 20px;
+        width: 80%;
+    }
+
+    #text-right p {
+        color: #fff;
+        font-weight: 600;
+        font-size: 15px;
+    }
+
+    #page6-text button {
+        padding: 12px 35px;
+        font-size: 15px;
+        margin-top: 30px;
+        font-family: america;
+        background-color: transparent;
+        border: 1px solid #fff;
+        color: #fff;
+        position: relative;
+        overflow: hidden;
+        -webkit-transition: all ease 0.2s;
+        -o-transition: all ease 0.2s;
+        transition: all ease 0.2s;
+    }
+
+    #page6-text button:hover {
+        color: #111;
+    }
+
+    #page6-text button::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        left: 0;
+        top: 100%;
+        -webkit-transition: all ease 0.2s;
+        -o-transition: all ease 0.2s;
+        transition: all ease 0.2s;
+        z-index: -1;
+    }
+
+    #page6-text button:hover::after {
+        top: 0;
+    }
+
+    #text-center {
+        position: absolute;
+        top: 200%;
+        left: 50%;
+        -webkit-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+        transform: translate(-50%, 0);
+        text-align: center;
+        width: 90%;
+    }
+
+    #page6-text h2 {
+        font-size: 10.5vw;
+        line-height: 10vw;
+        text-align: center;
+        font-family: america;
+        color: #fff;
+    }
+
+    #page7 {
+        height: 100vh;
+        width: 100%;
+        background-color: #111;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 100px 20px 100px 20px;
+    }
+
+    #page7 h1 {
+        font-size: 18vw;
+        color: #faf6ef;
+        text-transform: uppercase;
+        font-family: america;
+        white-space: nowrap;
+    }
+
+    #page7-part2 {
+        color: #faf6ef;
+        padding-top: 40px;
+    }
+}
